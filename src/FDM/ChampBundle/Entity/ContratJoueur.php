@@ -34,12 +34,20 @@ class ContratJoueur
      * @ORM\Column(name="finContrat", type="datetime")
      */
     private $finContrat;
+    
+    /**
+     * 
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Joueur")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $joueurCJ;
+
 
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -93,5 +101,28 @@ class ContratJoueur
     {
         return $this->finContrat;
     }
-}
 
+    /**
+     * Set joueurCJ
+     *
+     * @param \FDM\ChampBundle\Entity\Joueur $joueurCJ
+     *
+     * @return ContratJoueur
+     */
+    public function setJoueurCJ(\FDM\ChampBundle\Entity\Joueur $joueurCJ)
+    {
+        $this->joueurCJ = $joueurCJ;
+
+        return $this;
+    }
+
+    /**
+     * Get joueurCJ
+     *
+     * @return \FDM\ChampBundle\Entity\Joueur
+     */
+    public function getJoueurCJ()
+    {
+        return $this->joueurCJ;
+    }
+}

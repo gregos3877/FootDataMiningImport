@@ -1,0 +1,46 @@
+<?php
+
+namespace FDM\ChampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ContratJoueur
+ *
+ * @ORM\Table(name="contrat_joueur")
+ * @ORM\Entity(repositoryClass="FDM\ChampBundle\Repository\ContratJoueurRepository")
+ */
+class ContratJoueur
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="debutContrat", type="datetime")
+     */
+    private $debutContrat;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="finContrat", type="datetime")
+     */
+    private $finContrat;
+    
+    /**
+     * 
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Joueur")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $joueurCJ;
+
+
+}
