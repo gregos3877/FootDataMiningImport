@@ -99,28 +99,5 @@ class Entraineur
     {
         return $this->prenomEntraineur;
     }
-
-    /**
-     * Set paysEntraineur
-     *
-     * @param \FDM\ChampBundle\Entity\Pays $paysEntraineur
-     *
-     * @return Entraineur
-     */
-    public function setPaysEntraineur(\FDM\ChampBundle\Entity\Pays $paysEntraineur)
-    {
-        $this->paysEntraineur = $paysEntraineur;
-
-        return $this;
-    }
-
-    /**
-     * Get paysEntraineur
-     *
-     * @return \FDM\ChampBundle\Entity\Pays
-     */
-    public function getPaysEntraineur()
-    {
-        return $this->paysEntraineur;
-    }
 }
+
