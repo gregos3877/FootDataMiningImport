@@ -34,6 +34,13 @@ class Joueur
      * @ORM\Column(name="prenomJoueur", type="string", length=255, nullable=true)
      */
     private $prenomJoueur;
+    
+    /**
+     * 
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Pays")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $paysJoueur;
 
 
     /**
