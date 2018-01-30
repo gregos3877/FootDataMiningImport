@@ -1,0 +1,4 @@
+services:
+#    fdm_champ.example:
+#        class: FDM\ChampBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

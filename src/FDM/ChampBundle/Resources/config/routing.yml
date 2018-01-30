@@ -1,0 +1,3 @@
+fdm_champ_homepage:
+    path:     /
+    defaults: { _controller: FDMChampBundle:Default:index }
