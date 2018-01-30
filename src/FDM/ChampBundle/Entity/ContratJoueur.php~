@@ -24,16 +24,16 @@ class ContratJoueur
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="debutContrat", type="datetime")
+     * @ORM\Column(name="debutContratJoueur", type="datetime")
      */
-    private $debutContrat;
+    private $debutContratJoueur;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="finContrat", type="datetime")
+     * @ORM\Column(name="finContratJoueur", type="datetime")
      */
-    private $finContrat;
+    private $finContratJoueur;
     
     /**
      * 
@@ -43,92 +43,12 @@ class ContratJoueur
     private $joueurCJ;
     
     /**
-     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Club")
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Equipe")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $clubCJ;
+    private $equipeCJ;
 
 
 
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set debutContrat
-     *
-     * @param \DateTime $debutContrat
-     *
-     * @return ContratJoueur
-     */
-    public function setDebutContrat($debutContrat)
-    {
-        $this->debutContrat = $debutContrat;
-
-        return $this;
-    }
-
-    /**
-     * Get debutContrat
-     *
-     * @return \DateTime
-     */
-    public function getDebutContrat()
-    {
-        return $this->debutContrat;
-    }
-
-    /**
-     * Set finContrat
-     *
-     * @param \DateTime $finContrat
-     *
-     * @return ContratJoueur
-     */
-    public function setFinContrat($finContrat)
-    {
-        $this->finContrat = $finContrat;
-
-        return $this;
-    }
-
-    /**
-     * Get finContrat
-     *
-     * @return \DateTime
-     */
-    public function getFinContrat()
-    {
-        return $this->finContrat;
-    }
-
-    /**
-     * Set joueurCJ
-     *
-     * @param \FDM\ChampBundle\Entity\Joueur $joueurCJ
-     *
-     * @return ContratJoueur
-     */
-    public function setJoueurCJ(\FDM\ChampBundle\Entity\Joueur $joueurCJ)
-    {
-        $this->joueurCJ = $joueurCJ;
-
-        return $this;
-    }
-
-    /**
-     * Get joueurCJ
-     *
-     * @return \FDM\ChampBundle\Entity\Joueur
-     */
-    public function getJoueurCJ()
-    {
-        return $this->joueurCJ;
-    }
+  
 }

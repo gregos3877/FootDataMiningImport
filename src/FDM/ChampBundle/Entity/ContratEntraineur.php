@@ -24,34 +24,35 @@ class ContratEntraineur
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="debutContratE", type="datetime")
+     * @ORM\Column(name="debutContratEntraineur", type="datetime")
      */
-    private $debutContratE;
+    private $debutContratEntraineur;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="finContratE", type="datetime")
+     * @ORM\Column(name="finContratEntraineur", type="datetime")
      */
-    private $finContratE;
+    private $finContratEntraineur;
 
     /**
-     *
      * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Entraineur")
      * @ORM\JoinColumn(nullable=false)
      */
     private $entraineurCE;
     
     /**
-     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Club")
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Equipe")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $clubCE;
+    private $equipeCE;
     
+    
+
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -59,51 +60,51 @@ class ContratEntraineur
     }
 
     /**
-     * Set debutContratE
+     * Set debutContratEntraineur
      *
-     * @param \DateTime $debutContratE
+     * @param \DateTime $debutContratEntraineur
      *
      * @return ContratEntraineur
      */
-    public function setDebutContratE($debutContratE)
+    public function setDebutContratEntraineur($debutContratEntraineur)
     {
-        $this->debutContratE = $debutContratE;
+        $this->debutContratEntraineur = $debutContratEntraineur;
 
         return $this;
     }
 
     /**
-     * Get debutContratE
+     * Get debutContratEntraineur
      *
      * @return \DateTime
      */
-    public function getDebutContratE()
+    public function getDebutContratEntraineur()
     {
-        return $this->debutContratE;
+        return $this->debutContratEntraineur;
     }
 
     /**
-     * Set finContratE
+     * Set finContratEntraineur
      *
-     * @param \DateTime $finContratE
+     * @param \DateTime $finContratEntraineur
      *
      * @return ContratEntraineur
      */
-    public function setFinContratE($finContratE)
+    public function setFinContratEntraineur($finContratEntraineur)
     {
-        $this->finContratE = $finContratE;
+        $this->finContratEntraineur = $finContratEntraineur;
 
         return $this;
     }
 
     /**
-     * Get finContratE
+     * Get finContratEntraineur
      *
      * @return \DateTime
      */
-    public function getFinContratE()
+    public function getFinContratEntraineur()
     {
-        return $this->finContratE;
+        return $this->finContratEntraineur;
     }
 
     /**
@@ -131,26 +132,26 @@ class ContratEntraineur
     }
 
     /**
-     * Set clubCE
+     * Set equipeCE
      *
-     * @param \FDM\ChampBundle\Entity\Club $clubCE
+     * @param \FDM\ChampBundle\Entity\Equipe $equipeCE
      *
      * @return ContratEntraineur
      */
-    public function setClubCE(\FDM\ChampBundle\Entity\Club $clubCE)
+    public function setEquipeCE(\FDM\ChampBundle\Entity\Equipe $equipeCE)
     {
-        $this->clubCE = $clubCE;
+        $this->equipeCE = $equipeCE;
 
         return $this;
     }
 
     /**
-     * Get clubCE
+     * Get equipeCE
      *
-     * @return \FDM\ChampBundle\Entity\Club
+     * @return \FDM\ChampBundle\Entity\Equipe
      */
-    public function getClubCE()
+    public function getEquipeCE()
     {
-        return $this->clubCE;
+        return $this->equipeCE;
     }
 }
