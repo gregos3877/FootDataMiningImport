@@ -193,28 +193,4 @@ class Rencontre
     {
         return $this->stadeRencontre;
     }
-
-    /**
-     * Set saisonRencontre
-     *
-     * @param \FDM\ChampBundle\Entity\Saison $saisonRencontre
-     *
-     * @return Rencontre
-     */
-    public function setSaisonRencontre(\FDM\ChampBundle\Entity\Saison $saisonRencontre)
-    {
-        $this->saisonRencontre = $saisonRencontre;
-
-        return $this;
-    }
-
-    /**
-     * Get saisonRencontre
-     *
-     * @return \FDM\ChampBundle\Entity\Saison
-     */
-    public function getSaisonRencontre()
-    {
-        return $this->saisonRencontre;
-    }
 }
