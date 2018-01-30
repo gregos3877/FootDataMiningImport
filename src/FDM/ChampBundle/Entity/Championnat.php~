@@ -100,28 +100,5 @@ class Championnat
     {
         return $this->divisionChampionnat;
     }
-
-    /**
-     * Set paysChampionnat
-     *
-     * @param \FDM\ChampBundle\Entity\Pays $paysChampionnat
-     *
-     * @return Championnat
-     */
-    public function setPaysChampionnat(\FDM\ChampBundle\Entity\Pays $paysChampionnat)
-    {
-        $this->paysChampionnat = $paysChampionnat;
-
-        return $this;
-    }
-
-    /**
-     * Get paysChampionnat
-     *
-     * @return \FDM\ChampBundle\Entity\Pays
-     */
-    public function getPaysChampionnat()
-    {
-        return $this->paysChampionnat;
-    }
 }
+

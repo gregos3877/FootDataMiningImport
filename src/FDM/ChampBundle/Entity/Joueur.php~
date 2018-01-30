@@ -100,28 +100,5 @@ class Joueur
     {
         return $this->prenomJoueur;
     }
-
-    /**
-     * Set paysJoueur
-     *
-     * @param \FDM\ChampBundle\Entity\Pays $paysJoueur
-     *
-     * @return Joueur
-     */
-    public function setPaysJoueur(\FDM\ChampBundle\Entity\Pays $paysJoueur)
-    {
-        $this->paysJoueur = $paysJoueur;
-
-        return $this;
-    }
-
-    /**
-     * Get paysJoueur
-     *
-     * @return \FDM\ChampBundle\Entity\Pays
-     */
-    public function getPaysJoueur()
-    {
-        return $this->paysJoueur;
-    }
 }
+

@@ -94,3 +94,4 @@ class Pays
         return $this->indicePays;
     }
 }
+
