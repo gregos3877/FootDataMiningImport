@@ -100,28 +100,5 @@ class Equipe
     {
         return $this->estProEquipe;
     }
-
-    /**
-     * Set clubEquipe
-     *
-     * @param \FDM\ChampBundle\Entity\Club $clubEquipe
-     *
-     * @return Equipe
-     */
-    public function setClubEquipe(\FDM\ChampBundle\Entity\Club $clubEquipe)
-    {
-        $this->clubEquipe = $clubEquipe;
-
-        return $this;
-    }
-
-    /**
-     * Get clubEquipe
-     *
-     * @return \FDM\ChampBundle\Entity\Club
-     */
-    public function getClubEquipe()
-    {
-        return $this->clubEquipe;
-    }
 }
+
