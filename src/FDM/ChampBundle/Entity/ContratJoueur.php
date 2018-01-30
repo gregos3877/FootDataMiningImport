@@ -41,6 +41,12 @@ class ContratJoueur
      * @ORM\JoinColumn(nullable=false)
      */
     private $joueurCJ;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Club")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $clubCJ;
 
 
 
@@ -124,5 +130,29 @@ class ContratJoueur
     public function getJoueurCJ()
     {
         return $this->joueurCJ;
+    }
+
+    /**
+     * Set clubCJ
+     *
+     * @param \FDM\ChampBundle\Entity\Club $clubCJ
+     *
+     * @return ContratJoueur
+     */
+    public function setClubCJ(\FDM\ChampBundle\Entity\Club $clubCJ)
+    {
+        $this->clubCJ = $clubCJ;
+
+        return $this;
+    }
+
+    /**
+     * Get clubCJ
+     *
+     * @return \FDM\ChampBundle\Entity\Club
+     */
+    public function getClubCJ()
+    {
+        return $this->clubCJ;
     }
 }
