@@ -1,0 +1,128 @@
+<?php
+
+namespace FDM\ChampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Saison
+ *
+ * @ORM\Table(name="saison")
+ * @ORM\Entity(repositoryClass="FDM\ChampBundle\Repository\SaisonRepository")
+ */
+class Saison
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="anneesSaison", type="string", length=255)
+     */
+    private $anneesSaison;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateDebutSaison", type="datetime")
+     */
+    private $dateDebutSaison;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateFinSaison", type="datetime")
+     */
+    private $dateFinSaison;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set anneesSaison
+     *
+     * @param string $anneesSaison
+     *
+     * @return Saison
+     */
+    public function setAnneesSaison($anneesSaison)
+    {
+        $this->anneesSaison = $anneesSaison;
+
+        return $this;
+    }
+
+    /**
+     * Get anneesSaison
+     *
+     * @return string
+     */
+    public function getAnneesSaison()
+    {
+        return $this->anneesSaison;
+    }
+
+    /**
+     * Set dateDebutSaison
+     *
+     * @param \DateTime $dateDebutSaison
+     *
+     * @return Saison
+     */
+    public function setDateDebutSaison($dateDebutSaison)
+    {
+        $this->dateDebutSaison = $dateDebutSaison;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDebutSaison
+     *
+     * @return \DateTime
+     */
+    public function getDateDebutSaison()
+    {
+        return $this->dateDebutSaison;
+    }
+
+    /**
+     * Set dateFinSaison
+     *
+     * @param \DateTime $dateFinSaison
+     *
+     * @return Saison
+     */
+    public function setDateFinSaison($dateFinSaison)
+    {
+        $this->dateFinSaison = $dateFinSaison;
+
+        return $this;
+    }
+
+    /**
+     * Get dateFinSaison
+     *
+     * @return \DateTime
+     */
+    public function getDateFinSaison()
+    {
+        return $this->dateFinSaison;
+    }
+}
+
