@@ -41,6 +41,13 @@ class Equipe
      * @ORM\JoinColumn(nullable=false)
      */
     private $clubEquipe;
+    
+    /**
+     * 
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Stade")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $stadeEquipe;
 
 
     /**
