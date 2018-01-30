@@ -131,28 +131,5 @@ class Saison
     {
         return $this->dateFinSaison;
     }
-
-    /**
-     * Set championnatSaison
-     *
-     * @param \FDM\ChampBundle\Entity\Championnat $championnatSaison
-     *
-     * @return Saison
-     */
-    public function setChampionnatSaison(\FDM\ChampBundle\Entity\Championnat $championnatSaison)
-    {
-        $this->championnatSaison = $championnatSaison;
-
-        return $this;
-    }
-
-    /**
-     * Get championnatSaison
-     *
-     * @return \FDM\ChampBundle\Entity\Championnat
-     */
-    public function getChampionnatSaison()
-    {
-        return $this->championnatSaison;
-    }
 }
+
