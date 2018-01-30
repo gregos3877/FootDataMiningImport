@@ -1,0 +1,97 @@
+<?php
+
+namespace FDM\ChampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entraineur
+ *
+ * @ORM\Table(name="entraineur")
+ * @ORM\Entity(repositoryClass="FDM\ChampBundle\Repository\EntraineurRepository")
+ */
+class Entraineur
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomEntraineur", type="string", length=255)
+     */
+    private $nomEntraineur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenomEntraineur", type="string", length=255, nullable=true)
+     */
+    private $prenomEntraineur;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomEntraineur
+     *
+     * @param string $nomEntraineur
+     *
+     * @return Entraineur
+     */
+    public function setNomEntraineur($nomEntraineur)
+    {
+        $this->nomEntraineur = $nomEntraineur;
+
+        return $this;
+    }
+
+    /**
+     * Get nomEntraineur
+     *
+     * @return string
+     */
+    public function getNomEntraineur()
+    {
+        return $this->nomEntraineur;
+    }
+
+    /**
+     * Set prenomEntraineur
+     *
+     * @param string $prenomEntraineur
+     *
+     * @return Entraineur
+     */
+    public function setPrenomEntraineur($prenomEntraineur)
+    {
+        $this->prenomEntraineur = $prenomEntraineur;
+
+        return $this;
+    }
+
+    /**
+     * Get prenomEntraineur
+     *
+     * @return string
+     */
+    public function getPrenomEntraineur()
+    {
+        return $this->prenomEntraineur;
+    }
+}
+
