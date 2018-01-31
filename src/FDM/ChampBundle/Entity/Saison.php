@@ -31,14 +31,14 @@ class Saison
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateDebutSaison", type="datetime")
+     * @ORM\Column(name="dateDebutSaison", type="datetime", nullable=true)
      */
     private $dateDebutSaison;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateFinSaison", type="datetime")
+     * @ORM\Column(name="dateFinSaison", type="datetime", nullable=true)
      */
     private $dateFinSaison;
     
