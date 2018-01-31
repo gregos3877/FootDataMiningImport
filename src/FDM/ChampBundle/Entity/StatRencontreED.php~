@@ -24,16 +24,16 @@ class StatRencontreED
     /**
      * @var int
      *
-     * @ORM\Column(name="nbrButM", type="integer", nullable=true)
+     * @ORM\Column(name="nbrButMarqueEE", type="integer", nullable=true)
      */
-    private $nbrButM;
+    private $nbrButMarqueED;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="nbrButE", type="integer", nullable=true)
+     * @ORM\Column(name="nbrButEncaisseEE", type="integer", nullable=true)
      */
-    private $nbrButE;
+    private $nbrButEncaisseEE;
     
     /**
      * 
@@ -50,62 +50,6 @@ class StatRencontreED
     private $rencontreSRED;
 
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
-    /**
-     * Set nbrButM
-     *
-     * @param integer $nbrButM
-     *
-     * @return StatRencontreED
-     */
-    public function setNbrButM($nbrButM)
-    {
-        $this->nbrButM = $nbrButM;
 
-        return $this;
-    }
-
-    /**
-     * Get nbrButM
-     *
-     * @return int
-     */
-    public function getNbrButM()
-    {
-        return $this->nbrButM;
-    }
-
-    /**
-     * Set nbrButE
-     *
-     * @param integer $nbrButE
-     *
-     * @return StatRencontreED
-     */
-    public function setNbrButE($nbrButE)
-    {
-        $this->nbrButE = $nbrButE;
-
-        return $this;
-    }
-
-    /**
-     * Get nbrButE
-     *
-     * @return int
-     */
-    public function getNbrButE()
-    {
-        return $this->nbrButE;
-    }
 }
-

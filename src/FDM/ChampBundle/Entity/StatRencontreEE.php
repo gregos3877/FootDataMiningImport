@@ -5,12 +5,12 @@ namespace FDM\ChampBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * StatRencontreED
+ * StatRencontreEE
  *
- * @ORM\Table(name="stat_rencontre_e_d")
- * @ORM\Entity(repositoryClass="FDM\ChampBundle\Repository\StatRencontreEDRepository")
+ * @ORM\Table(name="stat_rencontre_e_e")
+ * @ORM\Entity(repositoryClass="FDM\ChampBundle\Repository\StatRencontreEERepository")
  */
-class StatRencontreED
+class StatRencontreEE
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class StatRencontreED
     /**
      * @var int
      *
-     * @ORM\Column(name="nbrButMarqueEE", type="integer", nullable=true)
+     * @ORM\Column(name="nbrButEE", type="integer", nullable=true)
      */
-    private $nbrButMarqueED;
+    private $nbrButEE;
 
     /**
      * @var int
@@ -36,25 +36,24 @@ class StatRencontreED
     private $nbrButEncaisseEE;
     
     /**
-     * 
+     *
      * @@ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Equipe")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $equipeSRED;
+    private $equipeSREE;
     
     /**
-     * 
+     *
      * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Rencontre")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $rencontreSRED;
-
+    private $rencontreSREE;
 
 
     /**
      * Get id
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -62,27 +61,27 @@ class StatRencontreED
     }
 
     /**
-     * Set nbrButMarqueED
+     * Set nbrButEE
      *
-     * @param integer $nbrButMarqueED
+     * @param integer $nbrButEE
      *
-     * @return StatRencontreED
+     * @return StatRencontreEE
      */
-    public function setNbrButMarqueED($nbrButMarqueED)
+    public function setNbrButEE($nbrButEE)
     {
-        $this->nbrButMarqueED = $nbrButMarqueED;
+        $this->nbrButEE = $nbrButEE;
 
         return $this;
     }
 
     /**
-     * Get nbrButMarqueED
+     * Get nbrButEE
      *
-     * @return integer
+     * @return int
      */
-    public function getNbrButMarqueED()
+    public function getNbrButEE()
     {
-        return $this->nbrButMarqueED;
+        return $this->nbrButEE;
     }
 
     /**
@@ -90,7 +89,7 @@ class StatRencontreED
      *
      * @param integer $nbrButEncaisseEE
      *
-     * @return StatRencontreED
+     * @return StatRencontreEE
      */
     public function setNbrButEncaisseEE($nbrButEncaisseEE)
     {
@@ -102,34 +101,11 @@ class StatRencontreED
     /**
      * Get nbrButEncaisseEE
      *
-     * @return integer
+     * @return int
      */
     public function getNbrButEncaisseEE()
     {
         return $this->nbrButEncaisseEE;
     }
-
-    /**
-     * Set rencontreSRED
-     *
-     * @param \FDM\ChampBundle\Entity\Rencontre $rencontreSRED
-     *
-     * @return StatRencontreED
-     */
-    public function setRencontreSRED(\FDM\ChampBundle\Entity\Rencontre $rencontreSRED)
-    {
-        $this->rencontreSRED = $rencontreSRED;
-
-        return $this;
-    }
-
-    /**
-     * Get rencontreSRED
-     *
-     * @return \FDM\ChampBundle\Entity\Rencontre
-     */
-    public function getRencontreSRED()
-    {
-        return $this->rencontreSRED;
-    }
 }
+
