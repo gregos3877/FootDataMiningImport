@@ -31,14 +31,14 @@ class Club
     /**
      * @var int
      *
-     * @ORM\Column(name="creationClub", type="integer", nullable=true)
+     * @ORM\Column(name="creationClub", type="integer")
      */
     private $creationClub;
     
     /**
      * @var int
      *
-     * @ORM\Column(name="creationClub2", type="integer", nullable=true)
+     * @ORM\Column(name="creationClub2", type="integer")
      */
     private $creationClub2;
     
@@ -51,7 +51,7 @@ class Club
     
     /**
      * 
-     * @ORM\OneToMany(targetEntity="FDM\ChampBundle\Entity\AncienNomClub", mappedBy="clubANC", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="FDM\ChampBundle\Entity\AncienNomClub", mappedBy="clubANC")
      */
     private $anciensNomsClub;
 
@@ -146,11 +146,7 @@ class Club
         $this->creationClub = $creationClub;
         $this->htmlClubWiki = $htmlClubWiki;
     	$this->anciensNomsClub = new \Doctrine\Common\Collections\ArrayCollection();
-    	
-//     	$date = new \DateTime('NOW');
-//     	$ancienNom = new AncienNomClub($nomClub, date_format($date, "Y"));
-//     	$ancienNom = new AncienNomClub($nomClub, $creationClub);
-//     	$this->addAnciensNomsClub($ancienNom);
+        
         
     }
     
@@ -198,29 +194,5 @@ class Club
     public function getAnciensNomsClub()
     {
         return $this->anciensNomsClub;
-    }
-
-    /**
-     * Set creationClub2
-     *
-     * @param integer $creationClub2
-     *
-     * @return Club
-     */
-    public function setCreationClub2($creationClub2)
-    {
-        $this->creationClub2 = $creationClub2;
-
-        return $this;
-    }
-
-    /**
-     * Get creationClub2
-     *
-     * @return integer
-     */
-    public function getCreationClub2()
-    {
-        return $this->creationClub2;
     }
 }

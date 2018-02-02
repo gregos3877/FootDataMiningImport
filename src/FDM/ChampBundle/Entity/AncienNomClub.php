@@ -31,16 +31,21 @@ class AncienNomClub
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateANC", type="datetime")
+     * @ORM\Column(name="dateANC", type="integer")
      */
     private $dateANC;
     
     /**
      * 
-     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Club")
+     * @ORM\ManyToOne(targetEntity="FDM\ChampBundle\Entity\Club", inversedBy="equipeNomEquipe")
      * @ORM\JoinColumn(nullable=false)
      */
     private $clubANC;
+    
+    public function __construct(string $ancienNomClub, int $dateANC){
+    	$this->ancienNomClub = $ancienNomClub ;
+    	$this->dateANC = $dateANC ;
+    }
 
 
     /**

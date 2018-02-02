@@ -48,6 +48,12 @@ class Equipe
      * @ORM\JoinColumn(nullable=true)
      */
     private $stadeEquipe;
+    
+    /**
+     * 
+     * @ORM\OneToMany(targetEntity="FDM\ChampBundle\Entity\NomEquipe", mappedBy="equipeNomEquipe")
+     */
+    private $nomsEquipe;
 
 
     /**
@@ -130,5 +136,72 @@ class Equipe
     public function getClubEquipe()
     {
         return $this->clubEquipe;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->nomsEquipe = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set stadeEquipe
+     *
+     * @param \FDM\ChampBundle\Entity\Stade $stadeEquipe
+     *
+     * @return Equipe
+     */
+    public function setStadeEquipe(\FDM\ChampBundle\Entity\Stade $stadeEquipe = null)
+    {
+        $this->stadeEquipe = $stadeEquipe;
+
+        return $this;
+    }
+
+    /**
+     * Get stadeEquipe
+     *
+     * @return \FDM\ChampBundle\Entity\Stade
+     */
+    public function getStadeEquipe()
+    {
+        return $this->stadeEquipe;
+    }
+
+    /**
+     * Add nomsEquipe
+     *
+     * @param \FDM\ChampBundle\Entity\NomEquipe $nomsEquipe
+     *
+     * @return Equipe
+     */
+    public function addNomsEquipe(\FDM\ChampBundle\Entity\NomEquipe $nomsEquipe)
+    {
+        $this->nomsEquipe[] = $nomsEquipe;
+        
+        $nomsEquipe->setEquipeNomEquipe($this);
+
+        return $this;
+    }
+
+    /**
+     * Remove nomsEquipe
+     *
+     * @param \FDM\ChampBundle\Entity\NomEquipe $nomsEquipe
+     */
+    public function removeNomsEquipe(\FDM\ChampBundle\Entity\NomEquipe $nomsEquipe)
+    {
+        $this->nomsEquipe->removeElement($nomsEquipe);
+    }
+
+    /**
+     * Get nomsEquipe
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getNomsEquipe()
+    {
+        return $this->nomsEquipe;
     }
 }
